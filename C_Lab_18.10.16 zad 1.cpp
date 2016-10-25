@@ -29,7 +29,7 @@ int main(int argc, char** argv)
 		}
 	
   
-	for (i=0;i<iCount_Temp-1;i++) //Пузырьковая сортировка по возрастанию
+	for (i=0;i<iCount_Temp-1;i++) //Пузырьковая сортировка по возрастанию временного массива
 	{
 	bool Swap=false;		
 			for (j=0;j<iCount_Temp-i-1;j++)
