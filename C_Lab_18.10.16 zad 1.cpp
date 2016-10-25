@@ -14,14 +14,14 @@ int main(int argc, char** argv)
 	int i,j,iCount_Temp(0);
 	srand((unsigned)time(NULL));
 
-	for (i=0;i<iMAXARRAY;i++)     // Çàïîëíåíèå ìàññèâà
+	for (i=0;i<iMAXARRAY;i++)     // Ð—Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ Ð¼Ð°ÑÑÐ¸Ð²Ð°
 	{
 		iArray_In[i]=(rand()%iRANGE);
 		printf("%3d",iArray_In[i]);
 	}
 	
 //	printf("\n");	
-	for (i=0;i<iMAXARRAY;i++)	//Çàïîëíÿåì âðåìåííûé ìàññèâ ÷åòíûìè ÷èñëàìè
+	for (i=0;i<iMAXARRAY;i++)	//Ð—Ð°Ð¿Ð¾Ð»Ð½ÑÐµÐ¼ Ð²Ñ€ÐµÐ¼ÐµÐ½Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² Ñ‡ÐµÑ‚Ð½Ñ‹Ð¼Ð¸ Ñ‡Ð¸ÑÐ»Ð°Ð¼Ð¸
 		if (!(iArray_In[i]%2))
 		{
 			iArray_Temp[iCount_Temp++]=iArray_In[i];			
@@ -29,7 +29,7 @@ int main(int argc, char** argv)
 		}
 	
   
-	for (i=0;i<iCount_Temp-1;i++) //Ïóçûðüêîâàÿ ñîðòèðîâêà ïî âîçðàñòàíèþ
+	for (i=0;i<iCount_Temp-1;i++) //ÐŸÑƒÐ·Ñ‹Ñ€ÑŒÐºÐ¾Ð²Ð°Ñ ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð¿Ð¾ Ð²Ð¾Ð·Ñ€Ð°ÑÑ‚Ð°Ð½Ð¸ÑŽ
 	{
 	bool Swap=false;		
 			for (j=0;j<iCount_Temp-i-1;j++)
@@ -45,7 +45,7 @@ int main(int argc, char** argv)
     }
     iCount_Temp=0;
     
-    	for (i=0;i<iMAXARRAY;i++) //Çàìåíà ÷åòíûõ ýëåìåíòîâ íà ñîðòèðîâàííûå
+    	for (i=0;i<iMAXARRAY;i++) //Ð—Ð°Ð¼ÐµÐ½Ð° Ñ‡ÐµÑ‚Ð½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð½Ð° ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ñ‹Ðµ
 		if (!(iArray_In[i]%2))
 		{
 			iArray_Out[i]=iArray_Temp[iCount_Temp++];
@@ -56,6 +56,6 @@ int main(int argc, char** argv)
 	printf("\n");
     for (i=0;i<iMAXARRAY;i++)
     printf("%3d",iArray_Out[i]);
-	//_getch();
+	_getch();
 	return 0;	
 }
